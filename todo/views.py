@@ -11,6 +11,6 @@ class ToDoViewSet(ModelViewSet):
     serializer_class = TodoSerializer
     permission_classes = (IsAuthenticated,)
     authentication_classes = (TokenAuthentication,)
-
+    # queryset = Todo.objects.all() => 
     def get_queryset(self):
         return Todo.objects.all()
